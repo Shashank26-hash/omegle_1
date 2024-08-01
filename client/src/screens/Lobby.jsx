@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSocket } from "../context/SocketProvider";
@@ -20,6 +21,7 @@ const LobbyScreen = () => {
   const handleJoinRoom = useCallback(
     (data) => {
       const { email, room } = data;
+      console.log(email); 
       navigate(`/room/${room}`);
     },
     [navigate]
